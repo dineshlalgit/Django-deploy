@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static "css/bootstrap.css" %}"/>
+    <script src="{% static "js/jquery-3.2.1.min.js" %}"></script>
+    <script src="{% static "js/bootstrap.js" %}"></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-static-top">
+        <ul class="nav navbar-nav">
+            <li><a href="{% url 'index' %}" class="navbar-brand">Django</a></li>
+            <li><a href="{% url 'admin:index' %}" class="navbar-link">Admin</a></li>
+            <li><a href="{% url 'userauth:register' %}" class="navbar-link">Register</a></li>
+            
+          {% if user.is_authenticated %}
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+          {% else %}
+            <li><a class="navbar-link" href="{% url 'userauth:user_login' %}">Login</a></li>
+          {% endif %}
+        
+            
+        </ul>
+    </nav>
+
+    <div class="container">
+        {% block body_block %}
+
+
+        {% endblock %}
+    </div>
+
+</body>
+</html>

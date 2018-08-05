@@ -1,0 +1,21 @@
+{% extends "userauth/base.html" %}
+{% load staticfiles %}
+
+{% block body_block %}
+    
+       {% if registered %}
+        <h1>Thank for registering have fun with django here</h1>
+       {% else %}
+        <h1>Please register your self django code shop</h1>
+            <div class="container">
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{user_form.as_p}}
+                    {{profile_form.as_p}}
+                    <input type="submit" value="Submit" class="btn btn-success">
+                </form>
+
+            </div>     
+
+       {% endif %}
+{% endblock %}

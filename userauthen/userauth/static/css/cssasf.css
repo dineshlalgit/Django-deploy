@@ -1,0 +1,38 @@
+p{
+    font-family: 'Hanalei Fill', cursive;
+    text-align: center;
+}
+#t1{
+   background-color: #6c5ce7;
+   margin: auto;
+   width: 150px;
+   height:300px;    
+}
+#t2{
+    background-color:#ff7675;   
+    margin: auto;
+    width: 150px;
+    height:300px;    
+     
+}
+ #t3{
+    background-color:#fdcb6e;   
+    margin: auto;
+    width: 150px;
+    height:300px;    
+     
+}
+ #t4{
+    background-color:#00b894;   
+    margin: auto;
+    width: 150px;
+    height:300px;    
+     
+}
+ #t5{
+    background-color: #a29bfe;   
+    margin: auto;
+    width: 150px;
+    height:300px;    
+ 
+}

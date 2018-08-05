@@ -1,0 +1,13 @@
+{% extends "userauth/base.html" %}
+{% block body_block %}
+    <form action="{% url 'userauth:user_login' %}" method="POST">
+        {% csrf_token %}
+        <label for="usrname" class="text-info">Username</label>
+        <input id='usrname' name="username" type="text" class="input" placeholder="User Name" />
+         &nbsp;&nbsp;
+        <label for="pass" class="text-info">Password</label>
+        <input type="password" id='pass' class="input" name="passwd" placeholder="Password" />
+        <br>
+        <input type="submit"  class="btn btn-success" value="Submit">
+    </form>
+{% endblock  %}
